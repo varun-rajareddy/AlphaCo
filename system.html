@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"></script>
+  
+   <script src="jscript/index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <title>New System</title>
+
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyB5l2xNbOkpEUq4dwuPTCMVYCKBbr7P_ng",
+      authDomain: "justbuy-d2ad5.firebaseapp.com",
+      databaseURL: "https://justbuy-d2ad5.firebaseio.com",
+      projectId: "justbuy-d2ad5",
+      storageBucket: "justbuy-d2ad5.appspot.com",
+      messagingSenderId: "1035824343821",
+      appId: "1:1035824343821:web:6235ea79d7ea7e30545e44",
+      measurementId: "G-3VBTLZ31YC"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+   <script>
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (!user) {
+          window.location.href = "index.html";
+        }
+      });
+    </script>
+  
+    <style>
+      .bgimg {
+        background-image: url(img/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+  
+      .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    margin-left: 15px;
+     }
+  
+      footer img {
+        width: 40px;
+        padding: 5px;
+      }
+      .card-img-right{
+    vertical-align: middle;
+    border-style: none;
+    width: 234px;
+}
+
+    </style>
+   <!--  <script>
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (!user) {
+          window.location.href = "index.html";
+        }
+      });
+    </script> -->
+  
+  
+  </head>
+  
+  <body>
+  <div class="container-fluid  bg-light  navbar-light">
+    <div class="container ">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="Tasks.html"><img src="img/logo1.jpg" class="logoimg" alt="" width="80" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="Tasks.html">Tasks and Schedules</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-weight-bold" href="flights.html">Flights</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link font-weight-bold" href="system.html">New System<span
+                  class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+        
+            <div class="input-group mx-3">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon1">Search</span>
+              </div>
+            </div>
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="logout()">Logout</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid bgimg p-0 mb-5">
+    <div class="p-5" style="background-color: #0000009e;">
+      <h2 class="text-center text-white">New System</h2>
+    </div>
+  </div>
+ 
+
+<div class="row mb-2">
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Fly by Wire</strong>
+            
+              <div class="mb-1 text-muted">Evolution of Aircraft Flight Control System</div>
+              <p class="card-text mb-auto">A conventional fixed-wing aircraft flight control system consists of flight control surfaces, the respective cockpit controls, connecting linkages, and the necessary operating mechanisms to control an aircraft's direction in flight.</p>
+              <a href="https://insights.globalspec.com/article/12930/aircraft-actuation-technologies-how-do-electrohydraulic-electrohydrostatic-and-electromechanical-actuators-work">More Details</a>
+            </div>
+            <img class="card-img-right flex-auto d-none d-md-block" src="img/control2.jpeg" alt="F-22">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-success">F-35A</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">Aircraft actuation technologies</a>
+              </h3>
+              <p class="card-text mb-auto">Aircraft actuation technologies: How do electrohydraulic, electrohydrostatic and electromechanical actuators work?</p>
+              <a href="https://insights.globalspec.com/article/12930/aircraft-actuation-technologies-how-do-electrohydraulic-electrohydrostatic-and-electromechanical-actuators-work">More Details</a>
+            </div>
+            <img class="card-img-right flex-auto d-none d-md-block" src="img/control3.jpeg" alt="Card image cap">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+      
+  <div class="container-fluid  bg-light  navbar-light">
+    <div class="container ">
+      <footer class="navbar navbar-expand-lg">
+
+        <div class="">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-uppercase font-weight-bold" href="https://www.facebook.com/varun.reddy.7927408">
+                <img src="img/Facebook.png"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase font-weight-bold" href="#"><img src="img/Twitter.png"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase font-weight-bold" href="#"><img src="img/Mail.jpg"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase font-weight-bold" href="#"><img src="img/Call.jpg"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase font-weight-bold" href="#"><img src="img/Location.png"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="ml-auto">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Copyright. All rights reserved</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+</body>
+
+</html>
