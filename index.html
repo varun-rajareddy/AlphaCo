@@ -12,10 +12,30 @@
 
 	<link rel="stylesheet" href="css/style.css">
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDaH7FLGheXCXc7S6drWX-5VLLZkVBEefw",
+    authDomain: "alphaco-9cb63.firebaseapp.com",
+    databaseURL: "https://alphaco-9cb63-default-rtdb.firebaseio.com",
+    projectId: "alphaco-9cb63",
+    storageBucket: "alphaco-9cb63.appspot.com",
+    messagingSenderId: "369085356894",
+    appId: "1:369085356894:web:22cdd77564972d7d370dcf"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 
 
 
-	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+	<!-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
@@ -36,7 +56,7 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
-  </script>
+  </script> -->
 
  <script src="jscript/index.js"></script>
 
@@ -58,11 +78,11 @@
     <button onclick="login()">Login</button>
     
     <div class="container" style="background-color:#f1f1f1">
-      <span class="psw"> <a href="#">Forgot password?</a></span>
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="button" class="signinbtn" onclick="document.location='signup.html'">Sign In</a></button>
+      <span class="psw"><a href="#">Forgot password?</a></span>
     </div>
   </div>
  
 </body>
-
-
 </html>
